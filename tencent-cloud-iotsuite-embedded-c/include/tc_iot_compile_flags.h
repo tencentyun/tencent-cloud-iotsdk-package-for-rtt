@@ -1,0 +1,62 @@
+#ifndef TC_IOT_COMPILE_FLAGS_H
+#define TC_IOT_COMPILE_FLAGS_H
+#include "rtconfig.h"
+
+#ifdef  PKG_USING_TENCENT_IOTKIT
+
+
+#ifdef PKG_USING_TENCENT_IOTKIT_MQTT
+#define ENABLE_MQTT
+#endif
+
+#ifdef PKG_USING_TENCENT_IOTKIT_COAP
+#define ENABLE_COAP
+#endif
+
+#ifdef PKG_USING_TENCENT_IOTKIT_MQTT_ADVANCED
+#define ENABLE_DATA_TEMPLATE
+#endif
+
+#ifdef PKG_USING_TENCENT_IOTKIT_MQTT_TLS
+#define ENABLE_TLS
+#endif
+
+#ifdef PKG_USING_TENCENT_IOTKIT_COAP_DTLS
+#define ENABLE_DTLS
+#endif
+
+#ifdef PKG_USING_TENCENT_IOTKIT_HTTP
+#define ENABLE_HTTP_RPC
+#endif
+
+
+#ifdef PKG_USING_TENCENT_IOTKIT_OTA
+#define ENABLE_OTA
+#endif
+
+#else
+#define ENABLE_MQTT
+#define ENABLE_OTA
+#define ENABLE_DATA_TEMPLATE
+#define ENABLE_SUB_DEVICE
+
+#define ENABLE_COAP
+
+#define ENABLE_TLS
+/* #undef ENABLE_DTLS */
+#endif
+
+
+#define ENABLE_STACK_TRACE_LOG
+#define ENABLE_MQTT_RECONNECT_FOREVER
+
+
+// Enabled Log Levels
+#define ENABLE_TC_IOT_LOG_TRACE
+#define ENABLE_TC_IOT_LOG_DEBUG
+#define ENABLE_TC_IOT_LOG_INFO
+#define ENABLE_TC_IOT_LOG_WARN
+#define ENABLE_TC_IOT_LOG_ERROR
+#define ENABLE_TC_IOT_LOG_FATAL
+
+#endif /* end of include guard */

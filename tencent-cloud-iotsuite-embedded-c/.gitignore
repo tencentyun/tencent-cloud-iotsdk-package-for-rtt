@@ -1,0 +1,21 @@
+
+# ctags file
+TAGS
+# gtags file
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+
+#cmake 
+build
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+*.swp
